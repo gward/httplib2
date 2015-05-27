@@ -1,7 +1,7 @@
 Introduction
 ============
 
-httplib2 is a comprehensive HTTP client library, httplib2.py supports many
+httplib2 is a comprehensive HTTP client library which supports many
 features left out of other HTTP libraries.
 
 ###HTTP and HTTPS
@@ -88,13 +88,13 @@ Use the Cache-Control: header to control how the caching operates.
                             headers={'cache-control':'no-cache'})
 ```
 
-The first request will be cached and since this is a request
+The first request will be cached. Since this is a request
 to bitworking.org it will be set to be cached for two hours,
 because that is how I have my server configured. Any subsequent
 GET to that URI will return the value from the on-disk cache
 and no request will be made to the server. You can use the
-Cache-Control: header to change the caches behavior and in
-this example the second request adds the Cache-Control:
+Cache-Control: header to change the cache's behavior. In
+this example, the second request adds the Cache-Control:
 header with a value of 'no-cache' which tells the library
 that the cached copy must not be used when handling this request.
 
